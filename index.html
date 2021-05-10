@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Let the Music flow</title>
+</head>
+<body class="dark" onload="Loaded()">
+    <div id="overlay"></div>
+    <div id="loading"></div>
+    <div class="wrapper">
+
+        <div class="top-bar">
+            <i id="light-song" class="material-icons">expand_more</i>
+            <span>Now Playing</span>
+            <i id="more" class="material-icons">more_horiz</i>
+        </div>
+
+        <div class="img-area">
+            <img src="" alt="">
+        </div>
+
+        <div class="song-details">
+            <p class="name"> </p>
+            <p class="artist"></p>
+        </div>
+
+        <div class="progress-area">
+            <div class="progress-bar" style="width: 0%;"></div>
+            <div class="timer">
+                <span class="current">0:20</span>
+                <span class="duration">3:40</span>
+            </div>
+            <audio id="main-audio" src=""></audio>
+        </div>
+
+            <div class="controls">
+                <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                <i id="prev" class="material-icons">skip_previous</i>
+                <div class="play-pause">
+                    <i class="material-icons">play_arrow</i>
+                </div>
+                <i id="next" class="material-icons">skip_next</i>
+                <i id="more-music" class="material-icons">queue_music</i>
+            </div>
+
+            <div class="music-list">
+                <div class="header">
+                    <div class="row">
+                        <i class="material-icons">queue_music</i>
+                        <span>Music List</span>
+                    </div>
+                    <i id="close" class="material-icons">close</i>
+                </div>
+                <ul class="ul">
+                    <!-- all the songs will come here -->
+                </ul>
+            </div>
+        </div>
+        <div class="stuff">
+            <ul>
+                <li class="downloadBtn"><a target="_blank">Download The Song</a></li>
+                <li class="Theme_toggle"><a href="javascript:void(0)">Toggle Theme</a></li>
+                <li><a href="form.html">Add a new Song</a></li>
+                <li><a href="http://shrit1401.cf" target="_blank">About The Creator</a></li>
+            </ul>
+        </div>
+    <script src="js/music-list.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        function Loaded(){
+            document.querySelector("#loading").classList.add("close");
+        }
+    </script>
+</body>
+</html>
